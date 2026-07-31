@@ -485,7 +485,7 @@ function runScan() {
 
 function runIdentity() {
 
-    const fullName = birthdayData.name;
+    const fullName = birthdayData.recipient;
 
     let index = 0;
 
