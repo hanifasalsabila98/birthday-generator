@@ -5,8 +5,6 @@ import {
     getDoc
 } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
-alert("1 - Imports OK");
-
 const params = new URLSearchParams(window.location.search);
 const birthdayId = params.get("id");
 let birthdayData;
@@ -60,10 +58,6 @@ function loadBirthdayData() {
     // AUDIO
     // ======================================
 
-	console.error("Intro URL:", birthdayData.music.intro);
-	console.error("Background URL:", birthdayData.music.background);
-	console.error("Congratulations URL:", birthdayData.music.congratulations);
-	
     introBgm.src = birthdayData.music.intro;
     bgm.src = birthdayData.music.background;
     congrats.src = birthdayData.music.congratulations;
@@ -205,14 +199,10 @@ function loadBirthdayData() {
 	<br>
 	`;
 
-	console.error(birthdayData.rewards);
-
 	const sortedRewards = [...birthdayData.rewards]
 		.sort((a, b) => b.greenRequired - a.greenRequired);
 
 	sortedRewards.forEach(reward => {
-
-    console.error("Reward item:", reward);
 
     rewardList.innerHTML += `
     <p>${"🟢".repeat(reward.greenRequired)} → ${reward.title}</p>
@@ -271,10 +261,7 @@ const maxRewards = 3;
 
 async function initializeBirthday() {
 
-    alert("3 - initializeBirthday started");
-
     if (!birthdayId) {
-        alert("Birthday ID not found.");
         return;
     }
 
@@ -283,21 +270,13 @@ async function initializeBirthday() {
     );
 
     if (!snapshot.exists()) {
-        alert("Birthday not found.");
         return;
     }
 
     birthdayData = snapshot.data();
 
-	console.log("Loaded birthdayData:", birthdayData);
-	console.log("Recipient:", birthdayData.recipient);
-
-    alert("4 - Data loaded");
-
     loadBirthdayData();
 }
-
-alert("2 - Before initializeBirthday");
 
 initializeBirthday();
 
@@ -332,10 +311,8 @@ function switchScreen(currentScreen, nextScreen, callback = null) {
 // ==========================================
 // START BUTTON
 // ==========================================
-alert("5 - Before Start Button");
-startBtn.addEventListener("click", () => {
 
-    alert("Start clicked");
+startBtn.addEventListener("click", () => {
 
     introBgm.volume = 0.5;
     introBgm.play().catch(error => {
