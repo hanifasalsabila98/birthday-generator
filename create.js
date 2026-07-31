@@ -1545,20 +1545,25 @@ function enableAutoPreview() {
 
 enableAutoPreview();
 
-
 publishButton.addEventListener("click", async () => {
 
     try {
 
+        const birthdayData = buildBirthdayData();
+
         const docRef = await addDoc(
             collection(db, "birthdays"),
-            {
-                test: "Hello Firestore!",
-                createdAt: Date.now()
-            }
+            birthdayData
         );
 
-        alert("Success!\n\nDocument ID:\n" + docRef.id);
+        const url =
+            `https://hanifasalsabila98.github.io/birthday-generator/index.html?id=${docRef.id}`;
+
+        alert(
+`Published successfully!
+
+${url}`
+        );
 
     } catch (error) {
 
