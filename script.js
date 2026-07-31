@@ -696,7 +696,7 @@ const status = document.getElementById("scratch-status");
 // const rewardTitle = document.getElementById("reward-title");
 // const rewardDescription = document.getElementById("reward-description");
 
-let scratchesLeft = birthdayData.scratch.scratchesAllowed;
+let scratchesLeft = 0;
 let giftsFound = 0;
 
 
