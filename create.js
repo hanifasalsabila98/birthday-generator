@@ -166,8 +166,8 @@ const previewButton = document.getElementById(
     "preview-btn"
 );
 
-const downloadButton = document.getElementById(
-    "download-btn"
+const publishButton = document.getElementById(
+    "publish-btn"
 );
 
 const resetButton = document.getElementById(
@@ -798,6 +798,19 @@ function attachRewardPreviewEvents() {
         });
             
 }
+
+/* ==========================================
+   PUBLISH
+========================================== */
+
+publishButton.addEventListener(
+    "click",
+    () => {
+
+        alert("Publish button works!");
+
+    }
+);
 
 /* ==========================================
    VALIDATION
