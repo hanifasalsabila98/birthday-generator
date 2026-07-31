@@ -58,24 +58,22 @@ function loadBirthdayData() {
     // AUDIO
     // ======================================
 
-    introBgm.src = birthdayData.introMusic;
-
-    bgm.src = birthdayData.backgroundMusic;
-
-    congrats.src = birthdayData.congratsMusic;
+    introBgm.src = birthdayData.music.intro;
+    bgm.src = birthdayData.music.background;
+    congrats.src = birthdayData.music.congratulations;
 
 
     // ======================================
     // BASIC INFORMATION
     // ======================================
 
-    identityName.textContent = birthdayData.name;
+    identityName.textContent = birthdayData.recipient;
 
     welcomeTitle.textContent =
         birthdayData.welcome.title;
 
     welcomeSubtitle.textContent =
-        birthdayData.welcome.subtitle;
+        birthdayData.recipient;
 
 
     // ======================================
