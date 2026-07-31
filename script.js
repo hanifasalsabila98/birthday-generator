@@ -197,16 +197,19 @@ function loadBirthdayData() {
     // ======================================
     
     rewardList.innerHTML = `
-    <h2>🏆 Rewards</h2>
-    
-    <br>
-    
-    <p>🟢🟢🟢🟢🟢 → ${birthdayData.rewards[4].title}</p>
-	<p>🟢🟢🟢🟢 → ${birthdayData.rewards[3].title}</p>
-	<p>🟢🟢🟢 → ${birthdayData.rewards[2].title}</p>
-	<p>🟢🟢 → ${birthdayData.rewards[1].title}</p>
-	<p>🟢 → ${birthdayData.rewards[0].title}</p>
-    `;
+	<h2>🏆 Rewards</h2>
+	<br>
+	`;
+
+	const sortedRewards = [...birthdayData.rewards]
+		.sort((a, b) => b.greenRequired - a.greenRequired);
+
+	sortedRewards.forEach(reward => {
+
+		rewardList.innerHTML += `
+		<p>${"🟢".repeat(reward.greenRequired)} → ${reward.title}</p>
+		`;
+	});
 
 }
 
@@ -792,7 +795,7 @@ circles.forEach(circle => {
 
 });
 
-function finishScratchGame(){
+function finishScratchGame() {
 
     bgm.pause();
 
@@ -805,35 +808,38 @@ function finishScratchGame(){
 
     congratsPopup.classList.add("show");
 
-    let reward;
+    // Sort rewards from highest requirement to lowest
+    const sortedRewards = [...birthdayData.rewards]
+        .sort((a, b) => b.greenRequired - a.greenRequired);
 
-    switch (giftsFound) {
+    // Find the best reward the player qualifies for
+    const reward = sortedRewards.find(
+        reward => giftsFound >= reward.greenRequired
+    );
 
-        case 5:
-            reward = birthdayData.rewards[4];
-            break;
+    // Fallback if no reward is available
+    if (!reward) {
 
-        case 4:
-            reward = birthdayData.rewards[3];
-            break;
-    
-        case 3:
-            reward = birthdayData.rewards[2];
-            break;
-    
-        case 2:
-            reward = birthdayData.rewards[1];
-            break;
-    
-        default:
-            reward = birthdayData.rewards[0];
-            break;
-    
+        popupTitle.textContent = "No Reward";
+        popupDescription.textContent =
+            "Better luck next time!";
+
+        return;
+
     }
 
-    popupTitle.textContent = reward.title;
-    popupDescription.textContent = reward.description;
+    if (!reward) {
 
+		popupTitle.textContent = "No Reward";
+		popupDescription.textContent =
+			"Better luck next time!";
+
+    return;
+
+}
+
+popupTitle.textContent = reward.title;
+popupDescription.textContent = reward.description;
 }
 
 popupCloseBtn.addEventListener("click", () => {
