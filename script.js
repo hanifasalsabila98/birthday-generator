@@ -257,7 +257,28 @@ const accessText = document.getElementById("access-text");
 let claimedRewards = 0;
 const maxRewards = 3;
 
-loadBirthdayData();
+async function initializeBirthday() {
+
+    if (!birthdayId) {
+        alert("Birthday ID not found.");
+        return;
+    }
+
+    const snapshot = await getDoc(
+        doc(db, "birthdays", birthdayId)
+    );
+
+    if (!snapshot.exists()) {
+        alert("Birthday not found.");
+        return;
+    }
+
+    birthdayData = snapshot.data();
+
+    loadBirthdayData();
+}
+
+initializeBirthday();
 
 // ==========================================
 // SCREEN TRANSITION
