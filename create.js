@@ -806,33 +806,6 @@ function attachRewardPreviewEvents() {
 }
 
 /* ==========================================
-   PUBLISH
-========================================== */
-
-publishButton.addEventListener("click", async () => {
-
-    try {
-
-        const docRef = await addDoc(
-            collection(db, "birthdays"),
-            {
-                test: "Hello Firestore!",
-                createdAt: Date.now()
-            }
-        );
-
-        alert("Success!\n\nDocument ID:\n" + docRef.id);
-
-    } catch (error) {
-
-        alert(error.message);
-        console.error(error);
-
-    }
-
-});
-
-/* ==========================================
    VALIDATION
 ========================================== */
 
