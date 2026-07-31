@@ -1549,6 +1549,13 @@ publishButton.addEventListener("click", async () => {
 
         const birthdayData = buildBirthdayData();
 
+        console.log("introMusic.value =", introMusic.value);
+        console.log("bgmMusic.value =", bgmMusic.value);
+        console.log("congratMusic.value =", congratMusic.value);
+
+        console.log("birthdayData =", birthdayData);
+        
+
         const docRef = await addDoc(
             collection(db, "birthdays"),
             birthdayData
