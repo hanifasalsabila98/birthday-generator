@@ -1008,15 +1008,13 @@ function collectBasicData() {
         recipient: recipientName.value.trim(),
 
         music: {
+            intro: introMusic.value.trim(),
+            
+            background: bgmMusic.value.trim(),
+            
+            congratulations: congratMusic.value.trim()
 
-            intro: introMusic.files[0]?.name || "",
-        
-            background: bgmMusic.files[0]?.name || "",
-        
-            congratulations: congratMusic.files[0]?.name || ""
-        
         }
-
     };
 
 }
