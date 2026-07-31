@@ -1,4 +1,5 @@
 import { db } from "./firebase-config.js";
+alert("create.js loaded");
 
 /* ==========================================
    DOM REFERENCES
