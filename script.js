@@ -309,8 +309,6 @@ function switchScreen(currentScreen, nextScreen, callback = null) {
 // ==========================================
 // START BUTTON
 // ==========================================
-
-startBtn.addEventListener("click", () => {
 startBtn.addEventListener("click", () => {
 
     alert("Start clicked");
