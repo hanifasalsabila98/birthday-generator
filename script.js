@@ -55,15 +55,6 @@ const messageTitle =
 function loadBirthdayData() {
 
     // ======================================
-    // AUDIO
-    // ======================================
-
-    introBgm.src = birthdayData.music.intro;
-    bgm.src = birthdayData.music.background;
-    congrats.src = birthdayData.music.congratulations;
-
-
-    // ======================================
     // BASIC INFORMATION
     // ======================================
 
@@ -221,7 +212,6 @@ const enterBtn = document.getElementById("enter-btn");
 const nextBtn = document.getElementById("next-btn");
 const rewardBtn = document.getElementById("next-message-btn");
 const rewardTermsBtn = document.getElementById("reward-terms-btn");
-const introBgm = document.getElementById("intro-bgm");
 const bgm = document.getElementById("bgm");
 const congrats = document.getElementById("congrats");
 
@@ -314,11 +304,6 @@ function switchScreen(currentScreen, nextScreen, callback = null) {
 
 startBtn.addEventListener("click", () => {
 
-    introBgm.volume = 0.5;
-    introBgm.play().catch(error => {
-		console.error("Intro play error:", error);
-	});
-
     switchScreen(
         startScreen,
         loadingScreen,
@@ -333,13 +318,11 @@ startBtn.addEventListener("click", () => {
 
 enterBtn.addEventListener("click", () => {
 
-    introBgm.pause();
-    introBgm.currentTime = 0;
-    
     bgm.volume = 0.5;
+
     bgm.play().catch(error => {
-		console.error("Background play error:", error);
-	});
+        console.error("Background play error:", error);
+    });
     
     switchScreen(
         welcomeScreen,
