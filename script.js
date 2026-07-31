@@ -208,10 +208,13 @@ function loadBirthdayData() {
 
 	sortedRewards.forEach(reward => {
 
-		rewardList.innerHTML += `
-		<p>${"🟢".repeat(reward.greenRequired)} → ${reward.title}</p>
-		`;
-	});
+    console.error("Reward item:", reward);
+
+    rewardList.innerHTML += `
+    <p>${"🟢".repeat(reward.greenRequired)} → ${reward.title}</p>
+    `;
+
+});
 
 }
 
@@ -839,6 +842,8 @@ function finishScratchGame() {
     return;
 
 }
+
+console.error("Selected reward:", reward);
 
 popupTitle.textContent = reward.title;
 popupDescription.textContent = reward.description;
