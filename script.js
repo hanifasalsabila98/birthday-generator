@@ -335,7 +335,9 @@ startBtn.addEventListener("click", () => {
     alert("Start clicked");
 
     introBgm.volume = 0.5;
-    introBgm.play().catch(() => {});
+    introBgm.play().catch(error => {
+		console.error("Intro play error:", error);
+	});
 
     switchScreen(
         startScreen,
@@ -355,7 +357,9 @@ enterBtn.addEventListener("click", () => {
     introBgm.currentTime = 0;
     
     bgm.volume = 0.5;
-    bgm.play().catch(() => {});
+    bgm.play().catch(error => {
+		console.error("Background play error:", error);
+	});
     
     switchScreen(
         welcomeScreen,
@@ -809,10 +813,14 @@ function finishScratchGame() {
     bgm.pause();
 
     congrats.currentTime = 0;
-    congrats.play();
+    congrats.play().catch(error => {
+		console.error("Congratulations play error:", error);
+	});
 
     congrats.onended = () => {
-        bgm.play();
+    bgm.play().catch(error => {
+		console.error("Background replay error:", error);
+	});
     };
 
     congratsPopup.classList.add("show");
@@ -857,6 +865,8 @@ popupCloseBtn.addEventListener("click", () => {
 
     congratsPopup.classList.remove("show");
 
-    bgm.play();
+    bgm.play().catch(error => {
+		console.error("Background popup replay error:", error);
+	});
 
 });
