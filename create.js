@@ -1,5 +1,4 @@
 import { db } from "./firebase-config.js";
-alert("Firebase connected!");
 
 /* ==========================================
    DOM REFERENCES
