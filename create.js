@@ -1,5 +1,10 @@
 import { db } from "./firebase-config.js";
 
+import {
+    collection,
+    addDoc
+} from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+
 alert("create.js loaded");
 /* ==========================================
    DOM REFERENCES
@@ -1554,9 +1559,26 @@ function enableAutoPreview() {
 enableAutoPreview();
 
 
-publishButton.addEventListener("click", () => {
+publishButton.addEventListener("click", async () => {
 
-    alert("Publish button works!");
+    try {
+
+        const docRef = await addDoc(
+            collection(db, "birthdays"),
+            {
+                test: "Hello Firestore!",
+                createdAt: Date.now()
+            }
+        );
+
+        alert("Success!\n\nDocument ID:\n" + docRef.id);
+
+    } catch (error) {
+
+        alert(error.message);
+        console.error(error);
+
+    }
 
 });
 
