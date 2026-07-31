@@ -1003,18 +1003,23 @@ validateGenerator();
 
 function collectBasicData() {
 
+    console.log("introMusic.value =", introMusic.value);
+    console.log("bgmMusic.value =", bgmMusic.value);
+    console.log("congratMusic.value =", congratMusic.value);
+
     return {
 
         recipient: recipientName.value.trim(),
 
         music: {
             intro: introMusic.value.trim(),
-            
+
             background: bgmMusic.value.trim(),
-            
+
             congratulations: congratMusic.value.trim()
 
         }
+
     };
 
 }
