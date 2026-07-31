@@ -5,7 +5,7 @@ import {
     addDoc
 } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
-alert("create.js loaded");
+alert("create.js loaded v2");
 /* ==========================================
    DOM REFERENCES
 ========================================== */
