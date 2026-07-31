@@ -5,6 +5,9 @@ import {
     getDoc
 } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
+const params = new URLSearchParams(window.location.search);
+const birthdayId = params.get("id");
+
 // ==========================================
 // DOM ELEMENTS
 // ==========================================
