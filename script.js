@@ -7,6 +7,7 @@ import {
 
 const params = new URLSearchParams(window.location.search);
 const birthdayId = params.get("id");
+let birthdayData;
 
 // ==========================================
 // DOM ELEMENTS
