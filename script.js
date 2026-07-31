@@ -201,11 +201,11 @@ function loadBirthdayData() {
     
     <br>
     
-    <p>🟢🟢🟢🟢🟢 → ${birthdayData.rewards.five.title}</p>
-    <p>🟢🟢🟢🟢 → ${birthdayData.rewards.four.title}</p>
-    <p>🟢🟢🟢 → ${birthdayData.rewards.three.title}</p>
-    <p>🟢🟢 → ${birthdayData.rewards.two.title}</p>
-    <p>🟢 → ${birthdayData.rewards.one.title}</p>
+    <p>🟢🟢🟢🟢🟢 → ${birthdayData.rewards[4].title}</p>
+	<p>🟢🟢🟢🟢 → ${birthdayData.rewards[3].title}</p>
+	<p>🟢🟢🟢 → ${birthdayData.rewards[2].title}</p>
+	<p>🟢🟢 → ${birthdayData.rewards[1].title}</p>
+	<p>🟢 → ${birthdayData.rewards[0].title}</p>
     `;
 
 }
@@ -810,23 +810,23 @@ function finishScratchGame(){
     switch (giftsFound) {
 
         case 5:
-            reward = birthdayData.rewards.five;
+            reward = birthdayData.rewards[4];
             break;
 
         case 4:
-            reward = birthdayData.rewards.four;
+            reward = birthdayData.rewards[3];
             break;
     
         case 3:
-            reward = birthdayData.rewards.three;
+            reward = birthdayData.rewards[2];
             break;
     
         case 2:
-            reward = birthdayData.rewards.two;
+            reward = birthdayData.rewards[1];
             break;
     
         default:
-            reward = birthdayData.rewards.one;
+            reward = birthdayData.rewards[0];
             break;
     
     }
