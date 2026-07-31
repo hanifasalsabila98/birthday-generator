@@ -70,7 +70,7 @@
         <h1>Birthday Content</h1>
 
         <p class="page-description">
-            Everything your recipient will see before the scratch game.
+            Write everything your recipient will see before playing the scratch game
         </p>
 
         <!-- ======================================
@@ -86,7 +86,7 @@
             <input
                 type="text"
                 id="recipient-name"
-                placeholder="Today's superstar"
+                placeholder="e.g. Haaland"
             >
 
         </div>
@@ -100,12 +100,13 @@
         <div class="form-group">
 
             <label for="welcome-lines">
-                Welcome Lines
+                Welcome Message
             </label>
 
             <textarea
                 id="welcome-lines"
-                placeholder="One line per row..."
+                placeholder="Welcome to your special day...
+Today is all about you!"
             ></textarea>
 
         </div>
@@ -124,7 +125,8 @@
 
             <textarea
                 id="verify-lines"
-                placeholder="One line per row..."
+                placeholder="Scanning identity...
+Verifying birthday recipient..."
             ></textarea>
 
         </div>
@@ -138,12 +140,13 @@
         <div class="form-group">
 
             <label for="birthday-lines">
-                Birthday Message
+                Birthday Wishes
             </label>
 
             <textarea
                 id="birthday-lines"
-                placeholder="One line per row..."
+                placeholder="Happy Birthday!
+Wishing you happiness and success"
             ></textarea>
 
         </div>
@@ -157,12 +160,13 @@
         <div class="form-group">
 
             <label for="message-lines">
-                Secret Message
+                Personal Message
             </label>
 
             <textarea
                 id="message-lines"
-                placeholder="One line per row..."
+                placeholder="Thank you for always being there.
+I hope all your dreams come true"
             ></textarea>
 
         </div>
@@ -177,7 +181,7 @@
 
     </div>
 
-</section>>
+</section>
 
 
 <!-- ======================================
@@ -218,6 +222,16 @@
 
     </div>
 
+        <div class="form-group">
+
+    <label>
+        Board Preview
+    </label>
+
+    <div id="scratch-preview"></div>
+
+        </div>
+
     <div class="form-group">
 
         <label for="green-circles">
@@ -252,7 +266,7 @@
     <div class="form-group">
 
         <label for="scratches-allowed">
-            Scratch Attempts
+            Maximum Scratches
         </label>
         
         <input
@@ -270,19 +284,9 @@
 
     </div>
 
-    <div class="form-group">
-
-    <label>
-        Board Preview
-    </label>
-
-    <div id="scratch-preview"></div>
-
-    </div>
-
         <div class="form-group">
 
-    <p>Rules</p>
+    <h2>Rules</h2>
 
     <ul id="scratch-rules">
 
@@ -328,11 +332,6 @@
 </section>
 
 <!-- ======================================
-     REWARDS
-======================================= -->
-
-
-<!-- ======================================
      GENERATE
 ======================================= -->
 
@@ -340,7 +339,7 @@
     
     <div class="page-card">
 
-    <h1>Generate data.js</h1>
+    <h1>Generate Website</h1>
 
     <p class="page-description">
         Everything is ready! Let's build your birthday website!
@@ -397,7 +396,7 @@
         <h2>Validation</h2>
 
         <p id="validation-status">
-            Ready to generate.
+            Ready to generate
         </p>
 
     </div>
@@ -410,7 +409,7 @@
 
     <div id="preview-box">
 
-        <h2>Generated data.js</h2>
+        <h2>Website Configuration</h2>
 
         <textarea
             id="generated-output"
@@ -438,7 +437,7 @@
         </button>
 
         <button id="publish-btn" class="btn-download">
-            Publish
+            Generate Website
         </button>
 
         <button id="reset-btn" class="btn-reset">
