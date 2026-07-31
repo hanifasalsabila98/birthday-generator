@@ -201,7 +201,7 @@ function loadBirthdayData() {
 	<br>
 	`;
 
-	console.log(birthdayData.rewards);
+	console.error(birthdayData.rewards);
 
 	const sortedRewards = [...birthdayData.rewards]
 		.sort((a, b) => b.greenRequired - a.greenRequired);
