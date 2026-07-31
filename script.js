@@ -311,10 +311,13 @@ function switchScreen(currentScreen, nextScreen, callback = null) {
 // ==========================================
 
 startBtn.addEventListener("click", () => {
+startBtn.addEventListener("click", () => {
+
+    alert("Start clicked");
 
     introBgm.volume = 0.5;
     introBgm.play().catch(() => {});
-    
+
     switchScreen(
         startScreen,
         loadingScreen,
