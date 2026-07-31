@@ -40,10 +40,6 @@ const generatePage = document.getElementById("generate-page");
 
 const recipientName = document.getElementById("recipient-name");
 
-const introMusic = document.getElementById("intro-music");
-const bgmMusic = document.getElementById("bgm-music");
-const congratMusic = document.getElementById("congrat-music");
-
 // ==========================================
 // WELCOME
 // ==========================================
@@ -1003,22 +999,9 @@ validateGenerator();
 
 function collectBasicData() {
 
-    console.log("introMusic.value =", introMusic.value);
-    console.log("bgmMusic.value =", bgmMusic.value);
-    console.log("congratMusic.value =", congratMusic.value);
-
     return {
 
         recipient: recipientName.value.trim(),
-
-        music: {
-            intro: introMusic.value.trim(),
-
-            background: bgmMusic.value.trim(),
-
-            congratulations: congratMusic.value.trim()
-
-        }
 
     };
 
@@ -1155,8 +1138,6 @@ function buildBirthdayData() {
 
         recipient: basic.recipient,
 
-        music: basic.music,
-
         welcome: collectWelcomeData(),
 
         verify: collectVerifyData(),
@@ -1254,13 +1235,6 @@ const birthdayData = {
     // ======================================
 
     name: ${quote(data.recipient)},
-
-    introMusic: ${quote(data.music.intro)},
-
-    backgroundMusic: ${quote(data.music.background)},
-
-    congratsMusic: ${quote(data.music.congratulations)},
-
 
     // ======================================
     // VERIFY SCREEN
@@ -1391,10 +1365,6 @@ function saveFormData() {
 
         recipientName: recipientName.value,
 
-        introMusic: introMusic.value,
-        bgmMusic: bgmMusic.value,
-        congratMusic: congratMusic.value,
-
         welcomeLines: welcomeLines.value,
         verifyLines: verifyLines.value,
         birthdayLines: birthdayLines.value,
@@ -1430,15 +1400,6 @@ function loadFormData() {
 
     recipientName.value =
         data.recipientName || "";
-
-    introMusic.value =
-        data.introMusic || "";
-
-    bgmMusic.value =
-        data.bgmMusic || "";
-
-    congratMusic.value =
-        data.congratMusic || "";
 
     welcomeLines.value =
         data.welcomeLines || "";
@@ -1553,10 +1514,6 @@ publishButton.addEventListener("click", async () => {
     try {
 
         const birthdayData = buildBirthdayData();
-
-        console.log("introMusic.value =", introMusic.value);
-        console.log("bgmMusic.value =", bgmMusic.value);
-        console.log("congratMusic.value =", congratMusic.value);
 
         console.log("birthdayData =", birthdayData);
         
