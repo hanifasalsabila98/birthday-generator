@@ -24,7 +24,7 @@
         <div id="progress-container">
 
             <div id="progress-text">
-                Step 1 / 8
+                Step 1 / 3
             </div>
         
             <div id="progress-bar">
@@ -40,31 +40,11 @@
         </div>
         
         <button class="nav-btn active" data-page="basic">
-            Basic Info
-        </button>
-
-        <button class="nav-btn" data-page="welcome">
-            Welcome
-        </button>
-
-        <button class="nav-btn" data-page="verify">
-            Verify
-        </button>
-
-        <button class="nav-btn" data-page="birthday">
-            Birthday
-        </button>
-
-        <button class="nav-btn" data-page="message">
-            Message
+            Birthday Content
         </button>
 
         <button class="nav-btn" data-page="scratch">
             Scratch Game
-        </button>
-
-        <button class="nav-btn" data-page="rewards">
-            Rewards
         </button>
 
         <button class="nav-btn" data-page="generate">
@@ -87,11 +67,15 @@
 
     <div class="page-card">
 
-        <h1>Basic Information</h1>
+        <h1>Birthday Content</h1>
 
         <p class="page-description">
-            First things first, who are we celebrating today?
+            Everything your recipient will see before the scratch game.
         </p>
+
+        <!-- ======================================
+             RECIPIENT
+        ======================================= -->
 
         <div class="form-group">
 
@@ -107,7 +91,79 @@
 
         </div>
 
+        <hr>
+
+        <!-- ======================================
+             WELCOME
+        ======================================= -->
+
         <div class="form-group">
+
+            <label for="welcome-lines">
+                Welcome Lines
+            </label>
+
+            <textarea
+                id="welcome-lines"
+                placeholder="One line per row..."
+            ></textarea>
+
+        </div>
+
+        <hr>
+
+        <!-- ======================================
+             VERIFY
+        ======================================= -->
+
+        <div class="form-group">
+
+            <label for="verify-lines">
+                Verification Lines
+            </label>
+
+            <textarea
+                id="verify-lines"
+                placeholder="One line per row..."
+            ></textarea>
+
+        </div>
+
+        <hr>
+
+        <!-- ======================================
+             BIRTHDAY
+        ======================================= -->
+
+        <div class="form-group">
+
+            <label for="birthday-lines">
+                Birthday Message
+            </label>
+
+            <textarea
+                id="birthday-lines"
+                placeholder="One line per row..."
+            ></textarea>
+
+        </div>
+
+        <hr>
+
+        <!-- ======================================
+             MESSAGE
+        ======================================= -->
+
+        <div class="form-group">
+
+            <label for="message-lines">
+                Secret Message
+            </label>
+
+            <textarea
+                id="message-lines"
+                placeholder="One line per row..."
+            ></textarea>
 
         </div>
 
@@ -121,283 +177,8 @@
 
     </div>
 
-</section>
+</section>>
 
-<!-- ======================================
-     WELCOME
-======================================= -->
-
-<section class="page" id="welcome-page">
-    
-    <div class="page-card">
-
-    <h1>Welcome Screen</h1>
-
-    <p class="page-description">
-        Set the mood with a cheerful greeting
-    </p>
-
-    <div class="editor-layout">
-
-    <div>
-
-        <div class="form-group">
-
-            <label>Welcome Lines</label>
-
-            <textarea
-                id="welcome-lines"
-            ></textarea>
-
-        </div>
-
-    </div>
-
-    <div>
-
-        <label>Live Preview</label>
-
-        <div class="preview-box">
-        
-            <div class="preview-content">
-        
-                <h2>WELCOME</h2>
-        
-                <h3 id="welcome-preview-subtitle">
- 
-                </h3>
-        
-                <div id="welcome-preview-lines"
-                     class="preview-lines"></div>
-        
-            </div>
-        
-        </div>
-
-</div>
-
-        </div>
-
-    </div> <!-- editor-layout -->
-
-    <div class="page-buttons">
-
-        <button id="welcome-back" class="btn-back">
-            Back
-        </button>
-
-        <button id="welcome-next" class="btn-next">
-            Next
-        </button>
-
-    </div>
-
-    </div>
-
-</section>
-
-<!-- ======================================
-     VERIFY
-======================================= -->
-
-<section class="page" id="verify-page">
-    
-    <div class="page-card">
-
-    <h1>Verify Screen</h1>
-
-    <p class="page-description">
-        A tiny checkpoint before entering the fun
-    </p>
-
-    <div class="editor-layout">
-
-    <div>
-
-        <div class="form-group">
-
-            <label>
-                Verification Lines
-            </label>
-
-            <textarea
-                id="verify-lines"
-            ></textarea>
-
-        </div>
-
-    </div>
-
-    <div>
-
-        <label>Live Preview</label>
-
-        <div class="preview-box">
-
-            <div class="preview-content">
-        
-                <h2>VERIFY</h2>
-        
-                <div id="verify-preview-lines" class="preview-lines"></div>
-        
-            </div>
-        
-        </div>
-
-        </div>
-
-    </div> <!-- editor-layout -->
-
-    <div class="page-buttons">
-
-        <button id="verify-back" class="btn-back">
-            Back
-        </button>
-
-        <button id="verify-next" class="btn-next">
-            Next
-        </button>
-
-    </div>
-
-    </div>
-</section>
-
-<!-- ======================================
-     BIRTHDAY
-======================================= -->
-
-<section class="page" id="birthday-page">
-
-    <div class="page-card">
-
-        <h1>Birthday Screen</h1>
-
-        <p class="page-description">
-            Make this screen full of joy and excitement
-        </p>
-
-        <div class="editor-layout">
-
-            <div>
-
-                <div class="form-group">
-
-                    <label>
-                        Birthday Message
-                    </label>
-
-                    <textarea
-                        id="birthday-lines"
-                    ></textarea>
-
-                </div>
-
-            </div>
-
-            <div>
-
-                <label>Live Preview</label>
-
-                <div class="preview-box">
-
-                    <div class="preview-content">
-                
-                        <h2>HAPPY BIRTHDAY!</h2>
-                
-                        <div id="birthday-preview-lines" class="preview-lines"></div>
-                
-                    </div>
-                
-                </div>
-
-                </div>
-
-        </div> <!-- editor-layout -->
-
-        <div class="page-buttons">
-
-            <button id="birthday-back" class="btn-back">
-                Back
-            </button>
-
-            <button id="birthday-next" class="btn-next">
-                Next
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ======================================
-     MESSAGE
-======================================= -->
-
-<section class="page" id="message-page">
-
-    <div class="page-card">
-
-        <h1>Secret Message</h1>
-
-        <p class="page-description">
-            Leave them smiling with your words
-        </p>
-
-        <div class="editor-layout">
-
-            <div>
-
-                <div class="form-group">
-
-                    <label>
-                        Message Lines
-                    </label>
-
-                    <textarea
-                        id="message-lines"
-                    ></textarea>
-
-                </div>
-
-            </div>
-
-            <div>
-
-                <label>Live Preview</label>
-
-                <div class="preview-box">
-                
-                    <div class="preview-content">
-                
-                        <h2>A LITTLE MESSAGE</h2>
-                
-                        <div id="message-preview-lines" class="preview-lines"></div>
-                
-                    </div>
-                
-                </div>
-
-                </div>
-
-        </div> <!-- editor-layout -->
-
-        <div class="page-buttons">
-
-            <button id="message-back" class="btn-back">
-                Back
-            </button>
-
-            <button id="message-next" class="btn-next">
-                Next
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
 
 <!-- ======================================
      SCRATCH GAME
@@ -499,35 +280,48 @@
 
     </div>
 
-  <div class="form-group">
-  
-      <p>Rules</p>
-  
-      <ul id="scratch-rules">
-  
-          <li>Board Size automatically determines the total circles.</li>
-  
-          <li>Red Circles are calculated automatically.</li>
-  
-          <li>Green Circles cannot exceed the board size.</li>
-  
-          <li>Scratch Attempts cannot exceed the total circles selected.</li>
-  
-      </ul>
-  
-  </div>
+        <div class="form-group">
 
-    <div class="page-buttons">
+    <p>Rules</p>
 
-        <button id="scratch-back" class="btn-back">
-            Back
-        </button>
+    <ul id="scratch-rules">
 
-        <button id="scratch-next" class="btn-next">
-            Next
-        </button>
+        <li>Board Size automatically determines the total circles.</li>
 
-    </div>
+        <li>Red Circles are calculated automatically.</li>
+
+        <li>Green Circles cannot exceed the board size.</li>
+
+        <li>Scratch Attempts cannot exceed the total circles selected.</li>
+
+    </ul>
+
+</div>
+
+<hr>
+
+<h2>
+    Rewards
+    (<span id="reward-count">1</span>)
+</h2>
+
+<p class="page-description">
+    Choose prizes they'll love.
+</p>
+
+<div id="reward-list"></div>
+
+<div class="page-buttons">
+
+    <button id="scratch-back" class="btn-back">
+        Back
+    </button>
+
+    <button id="scratch-next" class="btn-next">
+        Next
+    </button>
+
+</div>
         
     </div>
 
@@ -537,36 +331,6 @@
      REWARDS
 ======================================= -->
 
-<section class="page" id="rewards-page">
-    
-    <div class="page-card">
-
-    <h1>
-        Rewards
-        (<span id="reward-count">1</span>)
-    </h1>
-
-    <p class="page-description">
-        Choose prizes they'll love
-    </p>
-
-    <div id="reward-list"></div>
-
-    <div class="page-buttons">
-
-        <button id="rewards-back" class="btn-back">
-            Back
-        </button>
-
-        <button id="rewards-next" class="btn-next">
-            Next
-        </button>
-
-    </div>
-
-    </div>
-       
-</section>
 
 <!-- ======================================
      GENERATE
