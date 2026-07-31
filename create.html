@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Website Generator</title>
+
+    <link rel="stylesheet" href="create.css">
+</head>
+<body>
+
+    <!-- ==========================================
+         SIDEBAR
+    =========================================== -->
+
+    <aside id="sidebar">
+
+        <h2>Birthday Generator</h2>
+
+        <p class="sidebar-subtitle">
+        Let's make someone's special day even more memorable
+        </p>
+        
+        <div id="progress-container">
+
+            <div id="progress-text">
+                Step 1 / 8
+            </div>
+        
+            <div id="progress-bar">
+        
+                <div id="progress-fill"></div>
+        
+            </div>
+        
+        </div>
+
+        <div id="save-status">
+            ✓ Saved
+        </div>
+        
+        <button class="nav-btn active" data-page="basic">
+            Basic Info
+        </button>
+
+        <button class="nav-btn" data-page="welcome">
+            Welcome
+        </button>
+
+        <button class="nav-btn" data-page="verify">
+            Verify
+        </button>
+
+        <button class="nav-btn" data-page="birthday">
+            Birthday
+        </button>
+
+        <button class="nav-btn" data-page="message">
+            Message
+        </button>
+
+        <button class="nav-btn" data-page="scratch">
+            Scratch Game
+        </button>
+
+        <button class="nav-btn" data-page="rewards">
+            Rewards
+        </button>
+
+        <button class="nav-btn" data-page="generate">
+            Generate
+        </button>
+
+    </aside>
+
+    <!-- ==========================================
+         MAIN CONTENT
+    =========================================== -->
+
+    <main id="content">
+
+<!-- ======================================
+     BASIC INFORMATION
+======================================= -->
+
+<section class="page active" id="basic-page">
+
+    <div class="page-card">
+
+        <h1>Basic Information</h1>
+
+        <p class="page-description">
+            First things first, who are we celebrating today?
+        </p>
+
+        <div class="form-group">
+
+            <label for="recipient-name">
+                Whose birthday is it?
+            </label>
+
+            <input
+                type="text"
+                id="recipient-name"
+                placeholder="Today's superstar"
+            >
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="intro-music">
+                Intro Music
+            </label>
+
+            <input
+                type="file"
+                id="intro-music"
+                accept=".mp3,.wav,.ogg"
+            >
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="bgm-music">
+                Background Music
+            </label>
+
+            <input
+                type="file"
+                id="bgm-music"
+                accept=".mp3,.wav,.ogg"
+            >
+
+        </div>
+
+        <div class="form-group">
+
+            <label for="congrat-music">
+                Congratulations Music
+            </label>
+
+            <input
+                type="file"
+                id="congrat-music"
+                accept=".mp3,.wav,.ogg"
+            >
+
+        </div>
+
+        <div class="page-buttons">
+
+            <button id="basic-next" class="btn-next">
+                Next
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+     WELCOME
+======================================= -->
+
+<section class="page" id="welcome-page">
+    
+    <div class="page-card">
+
+    <h1>Welcome Screen</h1>
+
+    <p class="page-description">
+        Set the mood with a cheerful greeting
+    </p>
+
+    <div class="editor-layout">
+
+    <div>
+
+        <div class="form-group">
+
+            <label>Welcome Lines</label>
+
+            <textarea
+                id="welcome-lines"
+            ></textarea>
+
+        </div>
+
+    </div>
+
+    <div>
+
+        <label>Live Preview</label>
+
+        <div class="preview-box">
+        
+            <div class="preview-content">
+        
+                <h2>WELCOME</h2>
+        
+                <h3 id="welcome-preview-subtitle">
+ 
+                </h3>
+        
+                <div id="welcome-preview-lines"
+                     class="preview-lines"></div>
+        
+            </div>
+        
+        </div>
+
+</div>
+
+    <div class="page-buttons">
+
+        <button id="welcome-back" class="btn-back">
+            Back
+        </button>
+
+        <button id="welcome-next" class="btn-next">
+            Next
+        </button>
+
+    </div>
+        
+    </div>
+
+</section>
+
+<!-- ======================================
+     VERIFY
+======================================= -->
+
+<section class="page" id="verify-page">
+    
+    <div class="page-card">
+
+    <h1>Verify Screen</h1>
+
+    <p class="page-description">
+        A tiny checkpoint before entering the fun
+    </p>
+
+    <div class="editor-layout">
+
+    <div>
+
+        <div class="form-group">
+
+            <label>
+                Verification Lines
+            </label>
+
+            <textarea
+                id="verify-lines"
+            ></textarea>
+
+        </div>
+
+    </div>
+
+    <div>
+
+        <label>Live Preview</label>
+
+        <div class="preview-box">
+
+            <div class="preview-content">
+        
+                <h2>VERIFY</h2>
+        
+                <div id="verify-preview-lines" class="preview-lines"></div>
+        
+            </div>
+        
+        </div>
+
+</div>
+
+    <div class="page-buttons">
+
+        <button id="verify-back" class="btn-back">
+            Back
+        </button>
+
+        <button id="verify-next" class="btn-next">
+            Next
+        </button>
+
+    </div>
+
+    </div>
+</section>
+
+<!-- ======================================
+     BIRTHDAY
+======================================= -->
+
+<section class="page" id="birthday-page">
+
+    <div class="page-card">
+
+        <h1>Birthday Screen</h1>
+
+        <p class="page-description">
+            Make this screen full of joy and excitement
+        </p>
+
+        <div class="editor-layout">
+
+            <div>
+
+                <div class="form-group">
+
+                    <label>
+                        Birthday Message
+                    </label>
+
+                    <textarea
+                        id="birthday-lines"
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <label>Live Preview</label>
+
+                <div class="preview-box">
+
+                    <div class="preview-content">
+                
+                        <h2>HAPPY BIRTHDAY!</h2>
+                
+                        <div id="birthday-preview-lines" class="preview-lines"></div>
+                
+                    </div>
+                
+                </div>
+
+        </div>
+
+        <div class="page-buttons">
+
+            <button id="birthday-back" class="btn-back">
+                Back
+            </button>
+
+            <button id="birthday-next" class="btn-next">
+                Next
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+     MESSAGE
+======================================= -->
+
+<section class="page" id="message-page">
+
+    <div class="page-card">
+
+        <h1>Secret Message</h1>
+
+        <p class="page-description">
+            Leave them smiling with your words
+        </p>
+
+        <div class="editor-layout">
+
+            <div>
+
+                <div class="form-group">
+
+                    <label>
+                        Message Lines
+                    </label>
+
+                    <textarea
+                        id="message-lines"
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <label>Live Preview</label>
+
+                <div class="preview-box">
+                
+                    <div class="preview-content">
+                
+                        <h2>A LITTLE MESSAGE</h2>
+                
+                        <div id="message-preview-lines" class="preview-lines"></div>
+                
+                    </div>
+                
+                </div>
+
+        </div>
+
+        <div class="page-buttons">
+
+            <button id="message-back" class="btn-back">
+                Back
+            </button>
+
+            <button id="message-next" class="btn-next">
+                Next
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ======================================
+     SCRATCH GAME
+======================================= -->
+
+<section class="page" id="scratch-page">
+    
+    <div class="page-card">
+
+    <h1>Scratch Game</h1>
+
+    <p class="page-description">
+        Time to add a little birthday luck
+    </p>
+
+    <div class="form-group">
+
+        <label for="board-size">
+            Board Size
+        </label>
+
+        <select id="board-size">
+
+            <option value="4">
+                2 × 2 (4 Circles)
+            </option>
+
+            <option value="9" selected>
+                3 × 3 (9 Circles)
+            </option>
+
+            <option value="16">
+                4 × 4 (16 Circles)
+            </option>
+
+        </select>
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="green-circles">
+            Green Circles
+        </label>
+
+        <input
+            type="number"
+            id="green-circles"
+            min="1"
+            max="9"
+            placeholder="Enter green circles"
+        >
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="red-circles">
+            Red Circles (Automatic)
+        </label>
+
+        <input
+            type="number"
+            id="red-circles"
+            readonly
+            value="8"
+        >
+
+    </div>
+
+    <div class="form-group">
+
+        <label for="scratches-allowed">
+            Scratch Attempts
+        </label>
+        
+        <input
+            type="number"
+            id="scratches-allowed"
+            ...
+        >
+        
+        <small
+                id="scratch-max-note"
+                class="input-note"
+            >
+            Max: 
+        </small>
+
+    </div>
+
+    <div class="form-group">
+
+    <label>
+        Board Preview
+    </label>
+
+    <div id="scratch-preview"></div>
+
+    </div>
+
+  <div class="form-group">
+  
+      <p>Rules</p>
+  
+      <ul id="scratch-rules">
+  
+          <li>Board Size automatically determines the total circles.</li>
+  
+          <li>Red Circles are calculated automatically.</li>
+  
+          <li>Green Circles cannot exceed the board size.</li>
+  
+          <li>Scratch Attempts cannot exceed the total circles selected.</li>
+  
+      </ul>
+  
+  </div>
+
+    <div class="page-buttons">
+
+        <button id="scratch-back" class="btn-back">
+            Back
+        </button>
+
+        <button id="scratch-next" class="btn-next">
+            Next
+        </button>
+
+    </div>
+        
+    </div>
+
+</section>
+
+<!-- ======================================
+     REWARDS
+======================================= -->
+
+<section class="page" id="rewards-page">
+    
+    <div class="page-card">
+
+    <h1>
+        Rewards
+        (<span id="reward-count">1</span>)
+    </h1>
+
+    <p class="page-description">
+        Choose prizes they'll love
+    </p>
+
+    <div id="reward-list"></div>
+
+    <div class="page-buttons">
+
+        <button id="rewards-back" class="btn-back">
+            Back
+        </button>
+
+        <button id="rewards-next" class="btn-next">
+            Next
+        </button>
+
+    </div>
+
+    </div>
+       
+</section>
+
+<!-- ======================================
+     GENERATE
+======================================= -->
+
+<section class="page" id="generate-page">
+    
+    <div class="page-card">
+
+    <h1>Generate data.js</h1>
+
+    <p class="page-description">
+        Everything is ready! Let's build your birthday website!
+    </p>
+
+    <!-- ==================================
+         SUMMARY
+    =================================== -->
+
+    <div id="generator-summary">
+
+        <h2>Configuration Summary</h2>
+
+        <div class="summary-item">
+            <strong>Recipient</strong>
+            <span id="summary-name">-</span>
+        </div>
+
+        <div class="summary-item">
+            <strong>Verify Lines</strong>
+            <span id="summary-verify">0</span>
+        </div>
+
+        <div class="summary-item">
+            <strong>Welcome Lines</strong>
+            <span id="summary-welcome">0</span>
+        </div>
+
+        <div class="summary-item">
+            <strong>Birthday Lines</strong>
+            <span id="summary-birthday">0</span>
+        </div>
+
+        <div class="summary-item">
+            <strong>Message Lines</strong>
+            <span id="summary-message">0</span>
+        </div>
+
+        <div class="summary-item">
+            <strong>Total Circles</strong>
+            <span id="summary-circles">9</span>
+        </div>
+
+    </div>
+
+    <br>
+
+    <!-- ==================================
+         VALIDATION
+    =================================== -->
+
+    <div id="validation-box">
+
+        <h2>Validation</h2>
+
+        <p id="validation-status">
+            Ready to generate.
+        </p>
+
+    </div>
+
+    <br>
+
+    <!-- ==================================
+         GENERATED PREVIEW
+    =================================== -->
+
+    <div id="preview-box">
+
+        <h2>Generated data.js</h2>
+
+        <textarea
+            id="generated-output"
+            rows="18"
+            readonly
+            spellcheck="false"
+        ></textarea>
+
+    </div>
+
+    <br>
+
+    <!-- ==================================
+         ACTIONS
+    =================================== -->
+
+    <div class="page-buttons">
+
+        <button id="generate-back" class="btn-back">
+            Back
+        </button>
+
+        <button id="preview-btn" class="btn-preview">
+            Preview
+        </button>
+
+        <button id="download-btn" class="btn-download">
+            Download
+        </button>
+
+        <button id="reset-btn" class="btn-reset">
+            Reset
+        </button>
+
+    </div>
+        
+    </div>
+
+</section>
+
+    </main>
+
+    <script src="create.js"></script>
+
+</body>
+</html>

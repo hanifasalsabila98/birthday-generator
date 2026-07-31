@@ -1,0 +1,680 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+
+    background:#000;
+    color:#fff;
+
+    font-family:"Courier New", monospace;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   COMMON SCREEN
+========================================== */
+
+.screen{
+
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+    opacity:1;
+
+    transition:opacity .35s ease;
+
+}
+
+.hidden{
+    display:none;
+}
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1{
+    font-size:46px;
+    font-weight:normal;
+    margin-bottom:10px;
+}
+
+h2{
+    font-size:32px;
+    font-weight:normal;
+    margin-bottom:8px;
+}
+
+h3{
+    font-size:24px;
+    font-weight:normal;
+}
+
+p{
+
+    font-size:18px;
+    line-height:1.6;
+
+    margin:5px 0;
+
+}
+
+small{
+
+    font-size:14px;
+    opacity:.8;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+button{
+
+    margin-top:25px;
+
+    padding:16px 52px;
+
+    border:2px solid white;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:20px;
+
+    letter-spacing:3px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    background:white;
+
+    color:black;
+
+    transform:scale(1.05);
+
+}
+
+/* ==========================================
+   START
+========================================== */
+
+#start-btn{
+
+    animation:pulse 2s infinite;
+
+}
+
+/* ==========================================
+   LOADING
+========================================== */
+
+#loading-text{
+
+    letter-spacing:3px;
+
+}
+
+/* ==========================================
+   HELLO
+========================================== */
+
+#hello-face{
+
+    margin:20px 0;
+
+    animation:bounce 1.2s infinite;
+
+}
+
+#continue-text{
+
+    margin-top:25px;
+
+    opacity:.6;
+
+    animation:blink 1.5s infinite;
+
+}
+
+/* ==========================================
+   TERMINAL
+========================================== */
+
+.line{
+
+    opacity:.5;
+
+    margin:10px 0 25px;
+
+}
+
+/* ==========================================
+   SCAN
+========================================== */
+
+#progress-bar{
+
+    width:320px;
+
+    height:18px;
+
+    border:2px solid white;
+
+    margin:30px 0;
+
+    overflow:hidden;
+
+}
+
+#progress-fill{
+
+    width:0%;
+
+    height:100%;
+
+    background:white;
+
+    transition:width .08s linear;
+
+}
+
+#scan-percent{
+
+    font-size:20px;
+
+}
+
+/* ==========================================
+   IDENTITY
+========================================== */
+
+#identity-name{
+
+    margin-top:20px;
+
+    letter-spacing:2px;
+
+}
+
+/* ==========================================
+   VERIFY
+========================================== */
+
+#verify-screen p{
+
+    margin:10px 0;
+
+}
+
+#access-text{
+
+    margin-top:30px;
+
+    font-size:22px;
+
+}
+
+/* ==========================================
+   WELCOME
+========================================== */
+
+#welcome-screen p{
+
+    margin:4px;
+
+}
+
+/* ==========================================
+   BIRTHDAY
+========================================== */
+
+#birthday-screen p{
+
+    margin:4px;
+
+}
+
+/* ==========================================
+   MESSAGE
+========================================== */
+
+#message-screen{
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+#message-screen p{
+
+    margin:4px;
+
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@keyframes blink{
+
+    0%,100%{
+        opacity:.25;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+@keyframes pulse{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.05);
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:34px;
+    }
+
+    h2{
+        font-size:26px;
+    }
+
+    h3{
+        font-size:20px;
+    }
+
+    p{
+        font-size:16px;
+    }
+
+    small{
+        font-size:12px;
+    }
+
+    button{
+
+        font-size:18px;
+
+        padding:14px 40px;
+
+    }
+
+    #progress-bar{
+
+        width:230px;
+
+    }
+
+}
+
+/* ==========================================
+   SCRATCH CARD
+========================================== */
+
+#reward-screen{
+    overflow-y:auto;
+    padding:40px 20px;
+}
+
+#scratch-card{
+
+    width:320px;
+
+    margin:25px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,90px);
+
+    gap:18px;
+
+    justify-content:center;
+
+}
+
+.scratch-circle{
+
+    width:90px;
+    height:90px;
+
+    border:3px solid white;
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:40px;
+    line-height:1;
+
+    font-family:
+        "Noto Color Emoji",
+        "Segoe UI Emoji",
+        "Apple Color Emoji",
+        sans-serif;
+
+    background:#222;
+    transition:.25s;
+    user-select:none;
+    cursor:pointer;
+}
+
+.scratch-circle:hover{
+
+    transform:scale(1.08);
+
+    background:#333;
+
+}
+
+.scratch-circle.revealed{
+
+    background:white;
+
+    color:black;
+
+    transform:scale(.95);
+
+    cursor:default;
+
+}
+
+#scratch-counter{
+
+    margin-top:25px;
+
+    letter-spacing:2px;
+
+}
+
+#scratch-status{
+
+    margin-top:10px;
+
+    opacity:.75;
+
+}
+
+#reward-list{
+
+    width:100%;
+
+    max-width:550px;
+
+    margin:auto;
+
+    border:2px solid white;
+
+    padding:20px;
+
+}
+
+#reward-list h2{
+
+    margin-bottom:18px;
+
+}
+
+#reward-list p{
+
+    margin:10px 0;
+
+}
+
+#reward-result{
+
+    width:100%;
+
+    max-width:550px;
+
+    margin:30px auto 0;
+
+    border:2px solid white;
+
+    padding:25px;
+
+    animation:rewardPop .35s ease;
+
+}
+
+#reward-title{
+
+    margin:15px 0;
+
+}
+
+@keyframes rewardPop{
+
+    from{
+
+        transform:scale(.85);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:768px){
+
+    #scratch-card{
+
+        grid-template-columns:repeat(3,75px);
+
+        gap:14px;
+
+    }
+
+    .scratch-circle{
+
+        width:75px;
+        height:75px;
+
+        font-size:30px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    #scratch-card{
+
+        grid-template-columns:repeat(3,65px);
+
+        gap:12px;
+
+    }
+
+    .scratch-circle{
+
+        width:65px;
+        height:65px;
+
+        font-size:26px;
+
+    }
+
+    #reward-list{
+
+        padding:15px;
+
+    }
+
+}
+    
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#000;
+}
+
+::-webkit-scrollbar-thumb{
+    background:white;
+}
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+@keyframes floatGift{
+
+    0%,100%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+#reward-terms-screen{
+    overflow-y:auto;
+    padding:40px 20px;
+}
+#reward-terms-screen #reward-rules{
+    width:100%;
+    max-width:650px;
+    border:2px solid white;
+    padding:25px;
+    margin-bottom:30px;
+}
+
+/* ==========================================
+   CONGRATULATIONS POPUP
+========================================== */
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    opacity:0;
+    visibility:hidden;
+    transition:.3s ease;
+}
+
+.popup.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.popup-content{
+    width:90%;
+    max-width:360px;
+
+    background:#111;
+    border:2px solid white;
+    border-radius:18px;
+
+    padding:30px 24px;
+    text-align:center;
+
+    animation:rewardPop .35s ease;
+}
+
+#popup-title{
+    margin:18px 0 10px;
+}
+
+#popup-description{
+    margin-bottom:25px;
+}
+
+#popup-close-btn{
+    width:100%;
+}

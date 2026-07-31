@@ -1,0 +1,1146 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html,
+body{
+
+    width:100%;
+    height:100%;
+
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+body{
+
+    background:#111;
+    color:white;
+
+    font-family:"Courier New", monospace;
+
+    display:flex;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+#sidebar{
+
+    width:260px;
+
+    background:#000;
+
+    border-right:2px solid white;
+
+    padding:30px 20px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:12px;
+
+    overflow-y:auto;
+
+}
+
+#sidebar h2{
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+    font-weight:normal;
+
+    letter-spacing:1px;
+
+}
+
+#progress-container{
+
+    margin-bottom:30px;
+
+}
+
+#progress-text{
+
+    text-align:center;
+    font-size:14px;
+    margin-bottom:10px;
+
+}
+
+#progress-bar{
+
+    width:100%;
+    height:10px;
+
+    border:2px solid white;
+
+    overflow:hidden;
+
+}
+
+#progress-fill{
+
+    width:12.5%;
+    height:100%;
+
+    background:white;
+
+    transition:.25s;
+
+}
+
+#save-status{
+
+    margin-top:12px;
+
+    margin-bottom:8px;
+
+    text-align:center;
+
+    font-size:13px;
+
+    opacity:.75;
+
+    transition:.25s;
+
+}a
+
+/* ==========================================
+   SIDEBAR BUTTONS
+========================================== */
+
+.nav-btn{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border:2px solid white;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:16px;
+
+    text-align:left;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.nav-btn:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+.nav-btn.active{
+
+    background:white;
+
+    color:black;
+
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+#content{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:50px;
+
+}
+
+/* ==========================================
+   PAGES
+========================================== */
+
+.page{
+
+    display:none;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.page.active{
+
+    display:block;
+
+}
+
+/* ==========================================
+   PAGE HEADER
+========================================== */
+
+.page h1{
+
+    font-size:40px;
+
+    font-weight:normal;
+
+    margin-bottom:12px;
+    
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.page-description{
+
+    opacity:.75;
+
+    margin-bottom:40px;
+
+    font-size:20px;
+
+    line-height:1.6;
+
+}
+
+/* ==========================================
+   FORM GROUPS
+========================================== */
+
+.form-group{
+
+    margin-bottom:45px;
+
+}
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+.form-group p{
+
+    margin-bottom:12px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+}
+
+/* ==========================================
+   INPUTS
+========================================== */
+
+input,
+textarea,
+select{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:2px solid white;
+
+    background:#000;
+
+    color:white;
+
+    font-family:"Courier New", monospace;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.25s;
+
+}
+
+input[readonly]{
+
+    opacity:.75;
+
+    cursor:not-allowed;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+
+    background:#1a1a1a;
+
+}
+
+textarea{
+
+    resize:none;
+
+    height:260px;
+
+    overflow-y:auto;
+
+    line-height:1.6;
+
+}
+
+input::placeholder,
+textarea::placeholder{
+
+    color:#888;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+button{
+
+    padding:10px 22px;
+
+    border:2px solid white;
+
+    background:transparent;
+
+    color:white;
+
+    font-family:"Courier New", monospace;
+
+    font-size:15px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+/* ==========================================
+   PAGE NAVIGATION
+========================================== */
+
+.page-buttons{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-top:40px;
+
+    gap:20px;
+
+}
+
+.page-buttons button{
+
+    min-width:110px;
+
+}
+
+/* ==========================================
+   REWARD GROUPS
+========================================== */
+
+.reward-group{
+
+    border:2px solid white;
+
+    padding:24px;
+
+    margin-bottom:30px;
+
+}
+
+.reward-group h2{
+
+    margin-bottom:20px;
+
+    font-weight:normal;
+
+    font-size:26px;
+
+}
+
+.reward-group .form-group:last-child{
+
+    margin-bottom:0;
+
+}
+
+/* ==========================================
+   SUMMARY
+========================================== */
+
+#generator-summary{
+
+    border:2px solid white;
+
+    padding:30px;
+
+}
+
+#generator-summary h2{
+
+    font-weight:normal;
+
+    margin-bottom:25px;
+
+}
+
+.summary-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.2);
+
+}
+
+.summary-item:last-child{
+
+    border-bottom:none;
+
+}
+
+.summary-item strong{
+
+    font-weight:bold;
+
+}
+
+.summary-item span{
+
+    opacity:.8;
+
+}
+
+/* ==========================================
+   VALIDATION
+========================================== */
+
+#validation-box{
+
+    border:2px solid white;
+
+    padding:30px;
+
+}
+
+#validation-box h2{
+
+    margin-bottom:18px;
+
+    font-weight:normal;
+
+}
+
+#validation-status{
+
+    line-height:1.8;
+
+    white-space:pre-line;
+
+}
+
+/* ==========================================
+   GENERATED OUTPUT
+========================================== */
+
+#preview-box{
+
+    border:2px solid white;
+
+    padding:30px;
+
+}
+
+#preview-box h2{
+
+    margin-bottom:20px;
+
+    font-weight:normal;
+
+}
+
+#generated-output{
+
+    width:100%;
+
+    min-height:420px;
+
+    resize:vertical;
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+/* ==========================================
+   SCRATCH SETTINGS
+========================================== */
+
+.validation-note{
+
+    margin-top:20px;
+
+    padding:18px;
+
+    border:2px dashed white;
+
+    line-height:1.8;
+
+    opacity:.8;
+
+}
+
+/* ==========================================
+   HORIZONTAL DIVIDER
+========================================== */
+
+.section-divider{
+
+    height:2px;
+
+    background:white;
+
+    opacity:.15;
+
+    margin:40px 0;
+
+}
+
+/* ==========================================
+   GENERATE BUTTONS
+========================================== */
+
+#preview-btn{
+
+    margin-left:auto;
+
+}
+
+#download-btn{
+
+    font-weight:bold;
+
+}
+
+/* ==========================================
+   LARGE TABLETS
+========================================== */
+
+@media (max-width:1100px){
+
+    #sidebar{
+
+        width:220px;
+
+        padding:25px 16px;
+
+    }
+
+    #sidebar h2{
+
+        font-size:24px;
+
+    }
+
+    .nav-btn{
+
+        font-size:15px;
+
+        padding:12px 14px;
+
+    }
+
+    #content{
+
+        padding:35px;
+
+    }
+
+    .page{
+
+        max-width:100%;
+
+    }
+
+}
+
+/* ==========================================
+   TABLETS
+========================================== */
+
+@media (max-width:900px){
+
+    body{
+
+        flex-direction:column;
+
+        overflow:auto;
+
+    }
+
+    #sidebar{
+
+        width:100%;
+    
+        border-right:none;
+    
+        border-bottom:2px solid white;
+    
+        padding:16px;
+    
+        display:flex;
+        
+        flex-direction:row;
+    
+        flex-wrap:wrap;
+    
+        justify-content:space-between;
+    
+        gap:10px;
+    
+    }
+
+    #sidebar h2{
+
+        margin:0;
+
+        font-size:24px;
+
+        text-align:center;
+
+    }
+
+    .sidebar-subtitle{
+
+        margin-bottom:10px;
+
+        font-size:13px;
+
+        text-align:center;
+
+    }
+
+    #progress-container{
+
+        margin-bottom:10px;
+
+    }
+
+    #progress-text{
+
+        font-size:13px;
+
+        margin-bottom:6px;
+
+    }
+
+    #save-status{
+
+        margin:0 0 10px 0;
+
+        text-align:center;
+
+    }
+    
+    .nav-btn{
+
+        width:calc(50% - 5px);
+    
+        min-width: 0;
+    
+        padding:10px 8px;
+    
+        font-size:13px;
+    
+        display:flex;
+    
+        justify-content:center;
+    
+        align-items:center;
+    
+        text-align:center;
+    
+    }
+
+    #sidebar{ 
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:space-between;
+
+    }
+
+    #sidebar h2,
+
+    .sidebar-subtitle,
+    
+    #progress-container,
+    
+    #save-status{
+    
+        width:100%;
+    
+    }
+
+    #content{
+
+        padding:20px;
+
+    }
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:600px){
+
+    .page h1{
+
+        font-size:32px;
+
+    }
+
+    .page-description{
+
+        font-size:16px;
+
+    }
+
+    .dynamic-row{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .remove-btn{
+
+        width:100%;
+
+        height:46px;
+
+    }
+
+    .page-buttons{
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+    }
+
+    .page-buttons button{
+
+        width:100%;
+
+        min-width:0;
+
+    }
+
+    #preview-btn{
+
+        margin-left:0;
+
+    }
+
+    .summary-item{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:6px;
+
+    }
+
+    .reward-group{
+
+        padding:18px;
+
+    }
+
+    #generator-summary,
+    #validation-box,
+    #preview-box{
+
+        padding:20px;
+
+    }
+
+    #generated-output{
+
+        min-height:300px;
+
+        font-size:13px;
+
+    }
+
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width:420px){
+
+    #content{
+
+        padding:16px;
+
+    }
+
+    #sidebar{
+
+        padding:12px;
+
+    }
+
+    .nav-btn{
+
+        font-size:12px;
+    
+        padding:8px 6px;
+    
+    }
+
+    #sidebar h2{
+
+        font-size:20px;
+
+    }
+
+    .sidebar-subtitle{
+
+        display:none;
+
+    }
+
+    #progress-text{
+
+        font-size:12px;
+
+    }
+
+    #save-status{
+
+        font-size:12px;
+
+    }
+
+    .page h1{
+
+        font-size:28px;
+
+    }
+
+    input,
+    textarea,
+    select,
+    button{
+
+        font-size:15px;
+
+    }
+
+}
+
+/* ==========================================
+   SCRATCH BOARD PREVIEW
+========================================== */
+
+#scratch-preview {
+    margin-top: 10px;
+}
+
+.preview-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.preview-circle.green {
+    background: #4caf50;
+}
+
+.preview-circle.red {
+    background: #f44336;
+}
+
+.reward-preview{
+
+    margin-top:20px;
+
+    padding:18px;
+
+    border:2px dashed white;
+
+}
+
+.reward-preview h4{
+
+    margin:10px 0;
+
+    font-weight:normal;
+
+}
+
+.reward-preview p{
+
+    opacity:.8;
+
+    line-height:1.5;
+
+}
+
+.preview-green{
+
+    display:block;
+
+    margin-bottom:10px;
+
+}
+
+.page-card{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    padding:42px;
+
+    border:2px solid white;
+
+    border-radius:12px;
+
+}
+
+.sidebar-subtitle{
+
+    font-size:14px;
+
+    opacity:.65;
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    line-height:1.5;
+
+}
+
+.reward-item{
+
+    border:2px solid white;
+
+    border-radius:10px;
+
+    padding:24px;
+
+    margin-bottom:30px;
+
+}
+
+.editor-layout{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:40px;
+
+}
+
+.preview-box h2{
+
+    margin-bottom:10px;
+
+    text-align:center;
+
+}
+
+.editor-layout > div > label{
+
+    display:block;
+
+    margin-bottom:16px;
+}
+
+.preview-box h3{
+
+    margin-bottom:24px;
+
+    opacity:.7;
+
+    text-align:center;
+
+}
+
+.preview-box{
+
+    border:2px dashed white;
+    border-radius:10px;
+    padding:24px;
+    height:260px;
+    overflow-y:auto;
+
+    display:flex;
+}
+
+.preview-content{
+
+    width:100%;
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    text-align:center;
+}
+
+.preview-box h2{
+
+    margin-bottom:10px;
+}
+
+.preview-box h3{
+
+    margin-bottom:24px;
+
+    opacity:.7;
+
+    text-align:center;
+}
+
+.preview-lines{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    width:100%;
+
+}
+
+.preview-lines p{
+
+    margin:0;
+
+}
+
+.btn-back{
+    background:#3a3a3a;
+    color:#fff;
+}
+
+.btn-back:hover{
+    background:#555;
+    color:#fff;
+}
+
+.btn-next{
+    background:#fff;
+    color:#111;
+}
+
+.btn-next:hover{
+    background:#e5e5e5;
+    color:#111;
+}
+
+.btn-preview{
+    background:#3b82f6;
+    color:#fff;
+}
+
+.btn-preview:hover{
+    background:#2563eb;
+    color:#fff;
+}
+
+.btn-download{
+    background:#8b5cf6;
+    color:#fff;
+}
+
+.btn-download:hover{
+    background:#7c3aed;
+    color:#fff;
+}
+
+.btn-reset{
+    background:#ef4444;
+    color:#fff;
+}
+
+.btn-reset:hover{
+    background:#dc2626;
+    color:#fff;
+}
+
+.page-buttons button:hover{
+
+    transform:translateY(-2px) scale(1.02);
+
+    transition:.2s;
+
+}

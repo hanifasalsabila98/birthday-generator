@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================================= -->
+    <!-- START -->
+    <!-- ================================= -->
+
+    <section id="start-screen" class="screen">
+
+        <button id="start-btn">
+            START
+        </button>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- LOADING -->
+    <!-- ================================= -->
+
+    <section id="loading-screen" class="screen hidden">
+
+        <h1 id="loading-text">
+            Loading... 0%
+        </h1>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- HELLO -->
+    <!-- ================================= -->
+
+    <section id="hello-screen" class="screen hidden">
+
+        <h1>Hellooww</h1>
+
+        <h2 id="hello-face">
+            ᕙ(`▽´)ᕗ
+        </h2>
+
+        <p id="continue-text">
+            Tap anywhere to continue
+        </p>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- TERMINAL -->
+    <!-- ================================= -->
+
+    <section id="terminal-screen" class="screen hidden">
+
+        <h1>ACCESS TERMINAL</h1>
+
+        <p class="line">
+            ─────────────────────────────
+        </p>
+
+        <br>
+
+        <p>Only one person</p>
+        <p>is allowed beyond</p>
+        <p>this point</p>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- SCANNING -->
+    <!-- ================================= -->
+
+    <section id="scan-screen" class="screen hidden">
+
+        <h1>Scanning...</h1>
+
+        <div id="progress-bar">
+            <div id="progress-fill"></div>
+        </div>
+
+        <p id="scan-percent">
+            0%
+        </p>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- IDENTITY -->
+    <!-- ================================= -->
+
+    <section id="identity-screen" class="screen hidden">
+
+        <h2>Identity Found</h2>
+
+        <br>
+
+        <p>Name</p>
+
+        <h1 id="identity-name">
+            Usamechaan
+        </h1>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- VERIFY -->
+    <!-- ================================= -->
+
+    <section id="verify-screen" class="screen hidden">
+
+        <h2>Verifying...</h2>
+
+        <br>
+        
+        <div id="verify-lines"></div>
+
+        <br>
+
+        <p id="access-text" class="hidden">
+             Access Granted
+        </p>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- WELCOME -->
+    <!-- ================================= -->
+
+    <section id="welcome-screen" class="screen hidden">
+
+        <h1 id="welcome-title"></h1>
+
+        <h2 id="welcome-subtitle"></h2>
+
+        <br>
+
+        <div id="welcome-lines"></div>
+
+        <br><br>
+
+        <button id="enter-btn">
+            ENTER
+        </button>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- BIRTHDAY MESSAGE -->
+    <!-- ================================= -->
+
+    <section id="birthday-screen" class="screen hidden">
+
+        <h1></h1>
+
+        <div id="birthday-lines"></div>
+
+        <br><br>
+
+        <button id="next-btn">
+            CONTINUE
+        </button>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- SECRET MESSAGE -->
+    <!-- ================================= -->
+
+    <section id="message-screen" class="screen hidden">
+
+        <h1></h1>
+
+        <div id="message-lines"></div>
+
+        <br><br>
+
+        <button id="next-message-btn">
+            CONTINUE
+        </button>
+
+    </section>
+    
+        
+    <!-- ================================= -->
+    <!-- REWARD TERMS -->
+    <!-- ================================= -->
+
+    <section id="reward-terms-screen" class="screen hidden">
+
+        <h1>🎟️ HOW TO PLAY</h1>
+    
+        <br>
+    
+        <div id="reward-terms-content"></div>
+    
+        <br><br>
+    
+        <button id="reward-terms-btn">
+            START SCRATCHING
+        </button>
+
+    </section>
+
+    <!-- ================================= -->
+    <!-- REWARD VAULT -->
+    <!-- ================================= -->
+
+    <section id="reward-screen" class="screen hidden">
+
+    <h1>🎁 SCRATCH & WIN 🎁</h1>
+
+    <br>
+
+    <p>Scratch 5 circles only</p>
+    <p>Reveal as many 🟢 as possible</p>
+
+    <br>
+
+    <div id="scratch-card">
+
+        <div class="scratch-circle" data-id="0">?</div>
+        <div class="scratch-circle" data-id="1">?</div>
+        <div class="scratch-circle" data-id="2">?</div>
+
+        <div class="scratch-circle" data-id="3">?</div>
+        <div class="scratch-circle" data-id="4">?</div>
+        <div class="scratch-circle" data-id="5">?</div>
+
+        <div class="scratch-circle" data-id="6">?</div>
+        <div class="scratch-circle" data-id="7">?</div>
+        <div class="scratch-circle" data-id="8">?</div>
+
+    </div>
+
+    <br>
+
+    <h3 id="scratch-counter">
+        Scratches Left : 5
+    </h3>
+
+    <p id="scratch-status">
+        Pick a circle...
+    </p>
+
+    <br><br>
+
+    <div id="reward-list"></div>
+    </section>
+    
+    <!-- Congratulations Popup -->
+<div id="congrats-popup" class="popup">
+
+    <div class="popup-content">
+
+        <h1>🎉 Congratulations!</h1>
+
+        <h2 id="popup-title">Theme Park</h2>
+
+        <p id="popup-description">
+            You revealed all 5 gift boxes!
+        </p>
+
+        <button id="popup-close-btn">
+            Awesome!
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- Background Music -->
+    
+    <audio id="intro-bgm" loop></audio>
+
+    <audio id="bgm" loop></audio>
+
+    <audio id="congrats"></audio>
+    
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
