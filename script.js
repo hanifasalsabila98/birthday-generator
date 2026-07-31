@@ -60,6 +60,10 @@ function loadBirthdayData() {
     // AUDIO
     // ======================================
 
+	console.error("Intro:", birthdayData.music.intro);
+	console.error("Background:", birthdayData.music.background);
+	console.error("Congrats:", birthdayData.music.congratulations);
+
     introBgm.src = birthdayData.music.intro;
     bgm.src = birthdayData.music.background;
     congrats.src = birthdayData.music.congratulations;
