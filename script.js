@@ -99,7 +99,7 @@ function loadBirthdayData() {
 
     verifyLines.innerHTML = "";
 
-    birthdayData.verify.forEach(text => {
+    birthdayData.verify.lines.forEach(text => {
 
         const p = document.createElement("p");
 
