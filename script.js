@@ -289,6 +289,9 @@ async function initializeBirthday() {
 
     birthdayData = snapshot.data();
 
+	console.log("Loaded birthdayData:", birthdayData);
+	console.log("Recipient:", birthdayData.recipient);
+
     alert("4 - Data loaded");
 
     loadBirthdayData();
