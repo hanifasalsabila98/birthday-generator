@@ -5,6 +5,8 @@ import {
     getDoc
 } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
 
+alert("1 - Imports OK");
+
 const params = new URLSearchParams(window.location.search);
 const birthdayId = params.get("id");
 let birthdayData;
@@ -257,6 +259,8 @@ const maxRewards = 3;
 
 async function initializeBirthday() {
 
+    alert("3 - initializeBirthday started");
+
     if (!birthdayId) {
         alert("Birthday ID not found.");
         return;
@@ -273,8 +277,12 @@ async function initializeBirthday() {
 
     birthdayData = snapshot.data();
 
+    alert("4 - Data loaded");
+
     loadBirthdayData();
 }
+
+alert("2 - Before initializeBirthday");
 
 initializeBirthday();
 
@@ -309,6 +317,7 @@ function switchScreen(currentScreen, nextScreen, callback = null) {
 // ==========================================
 // START BUTTON
 // ==========================================
+alert("5 - Before Start Button");
 startBtn.addEventListener("click", () => {
 
     alert("Start clicked");
