@@ -1553,28 +1553,9 @@ function enableAutoPreview() {
 enableAutoPreview();
 
 
-downloadButton.addEventListener("click", () => {
+publishButton.addEventListener("click", () => {
 
-    if (!validateGenerator()) return;
-
-    const blob = new Blob(
-        [generateDataJS()],
-        {
-            type: "application/javascript"
-        }
-    );
-
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement("a");
-
-    a.href = url;
-
-    a.download = "data.js";
-
-    a.click();
-
-    URL.revokeObjectURL(url);
+    alert("Publish button works!");
 
 });
 
